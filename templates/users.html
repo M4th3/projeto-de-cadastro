@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title%} Lista de Cadastros {% endblock %}
+{% block content %}
+
+{% for user in users %}
+    {{ user.nome }}, {{ user.idade }}, {{ user.cpf }}, {{ user.id }}, {{ user.id_cidade }}, lock
+    {% endfor %}     
+
+ 
+
+
+{% endblock %}

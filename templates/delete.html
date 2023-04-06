@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %} Qual cadastro pretende apagar {% endblock %}
+
+{% block content %}
+<form action="{{url_for('users_delete')}}" method="POST">
+    Nome do usuário:<input type="text" name="usuário">
+                     <input type="submit" value="Submit">
+
+</form>
+
+{% endblock %}

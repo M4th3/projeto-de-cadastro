@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %} Faça seu cadastro {% endblock %}
+
+{% block content %}
+<form method="POST" action="{{url_for('usercreate')}}">
+    {{ form.csrf_token }}
+    <ul>
+    <li>{{ form.nome_do_usuario.label }} {{ form.nome_do_usuario(size=20) }}</li>
+    <li>{{ form.idade.label }} {{ form.idade(size=20)}} </li>
+    <li>{{ form.cpf.label }} {{ form.cpf(sizer=20)}}</li>
+    <li>{{ form.nome_do_mun.label }} {{ form.nome_do_mun(size=20) }}</li>
+    <li>{{ form.estado.label }} {{ form.estado(size=20) }}</li>
+    </ul>{{ form.submit }}
+    <input type="submit" value="Registrar">
+</form>
+
+
+
+{% endblock %}

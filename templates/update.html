@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %} Selecione o usuário ao qual você deseja alterar os dados {% endblock %}
+
+{% block content %}
+
+<p>{{ form.nome_do_usuario.label }} {{ form.nome_do_usuario(size=20) }}</p>
+
+ <ul>
+    <li>{{ form.idade.label }} {{ form.idade(size=20)}} </li>
+    <li>{{ form.cpf.label }} {{ form.cpf(sizer=20)}}</li>
+    <li>{{ form.nome_do_mun.label }} {{ form.nome_do_mun(size=20) }}</li>
+    <li>{{ form.estado.label }} {{ form.estado(size=20) }}</li>
+</ul>
+
+{% endblock %}
